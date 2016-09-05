@@ -32,6 +32,11 @@
 //    创建新特性界面
     ZFBNewFeatureView *vNew = [[ZFBNewFeatureView alloc]initWithFrame:self.view.bounds ];
     vNew.backgroundColor = [UIColor blueColor];
+    
+//    将图片数组传递给新特性界面
+    vNew.imgs = [self getNewFeatureImg];
+    
+//    将新特性界面添加到跟视图
     [self.view addSubview:vNew];
     
 }

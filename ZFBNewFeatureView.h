@@ -10,4 +10,9 @@
 
 @interface ZFBNewFeatureView : UIView
 
+/**
+ *  接受图片数组的属性
+ */
+@property(nonatomic,strong)NSArray *imgs;
+
 @end

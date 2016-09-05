@@ -9,7 +9,13 @@
 #import "ZFBNewFeatureView.h"
 
 @implementation ZFBNewFeatureView
-
+-(void)setImgs:(NSArray *)imgs{
+//    接受数据
+    _imgs = imgs;
+    
+//    将数据显示到面板上
+    
+}
 
 
 -(instancetype)initWithFrame:(CGRect)frame{
