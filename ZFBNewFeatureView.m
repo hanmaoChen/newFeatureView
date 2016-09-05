@@ -49,6 +49,8 @@
 #pragma mark - 创建更多的按钮
 -(void)createMoreButton{
     for (UIImageView *v in self.scrollView.subviews) {
+//        开启UIImageView的用户交互
+        v.userInteractionEnabled = YES;
         
         UIButton *btn = [[UIButton alloc]init];
 //        正常状态
@@ -57,6 +59,8 @@
         [btn setImage:[UIImage imageNamed:@"common_more_white"] forState:UIControlStateHighlighted];
 //        添加到父容器
         [v addSubview:btn];
+        
+        [btn addTarget:self action:@selector(clickMoreButton:) forControlEvents:UIControlEventTouchUpInside];
         
 //        设置按钮约束
         [btn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -68,6 +72,23 @@
     }
     
     
+}
+-(void)clickMoreButton:(UIButton *)sender{
+//    获得父类视图
+    UIView *v = sender.superview;
+//    放大倍数
+    CGFloat scale = 3.0;
+//    用动画放大并透明
+    [UIView animateWithDuration:1.2
+                     animations:^{
+                         
+                         v.transform = CGAffineTransformMakeScale(scale, scale);
+                         v.alpha = 0;
+                         
+                     } completion:^(BOOL finished) {
+//    动画完成后移除整个新特性界面
+                         [self removeFromSuperview];
+                     }];
 }
 
 /**
