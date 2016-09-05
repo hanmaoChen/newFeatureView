@@ -120,5 +120,32 @@
 //    记录变量
     self.scrollView = sV;
     
+    
+//    创建UIPageControl
+    
+    UIPageControl *pgCtrl = [[UIPageControl alloc]init];
+    
+//    总页数
+    pgCtrl.numberOfPages = 4;
+//    当前页数
+    pgCtrl.currentPage = 0;
+    
+//    默认颜色
+    pgCtrl.pageIndicatorTintColor = [UIColor blueColor];
+//    当前页颜色
+    pgCtrl.currentPageIndicatorTintColor = [UIColor orangeColor];
+    
+//    添加到父容器
+    [self addSubview:pgCtrl];
+    
+//    禁用用户交互
+    pgCtrl.userInteractionEnabled = NO;
+    
+//    设置约束
+    [pgCtrl mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.centerX.equalTo(self);
+        make.bottom.equalTo(self).offset(-80);
+    }];
 }
 @end
