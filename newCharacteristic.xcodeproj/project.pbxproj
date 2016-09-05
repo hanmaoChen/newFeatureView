@@ -99,6 +99,8 @@
 				E6CEC6041D7D9A330086C3AF /* NewFeature */,
 				E6CEC5C91D7D923B0086C3AF /* AppDelegate.h */,
 				E6CEC5CA1D7D923B0086C3AF /* AppDelegate.m */,
+				E6CEC6051D7D9AA10086C3AF /* ZFBMainViewController.h */,
+				E6CEC6061D7D9AA10086C3AF /* ZFBMainViewController.m */,
 				E6CEC5CF1D7D923B0086C3AF /* Main.storyboard */,
 				E6CEC5D21D7D923B0086C3AF /* Assets.xcassets */,
 				E6CEC5D41D7D923B0086C3AF /* LaunchScreen.storyboard */,
@@ -160,8 +162,6 @@
 		E6CEC6041D7D9A330086C3AF /* NewFeature */ = {
 			isa = PBXGroup;
 			children = (
-				E6CEC6051D7D9AA10086C3AF /* ZFBMainViewController.h */,
-				E6CEC6061D7D9AA10086C3AF /* ZFBMainViewController.m */,
 			);
 			name = NewFeature;
 			sourceTree = "<group>";
