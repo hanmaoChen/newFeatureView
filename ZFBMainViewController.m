@@ -32,7 +32,7 @@
 -(void)showNewFeatureView{
 //    创建新特性界面
     ZFBNewFeatureView *vNew = [[ZFBNewFeatureView alloc]initWithFrame:self.view.bounds ];
-    vNew.backgroundColor = [UIColor blueColor];
+//    vNew.backgroundColor = [UIColor blueColor];
     
 //    将图片数组传递给新特性界面
     vNew.imgs = [self getNewFeatureImg];
