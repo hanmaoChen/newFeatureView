@@ -11,6 +11,7 @@
 @interface ZFBNewFeatureView()
 
 @property(weak,nonatomic)UIScrollView *scrollView;
+@property(weak,nonatomic)UIPageControl *pgControl;
 
 @end
 
@@ -44,6 +45,7 @@
     
     [self createMoreButton];
     
+    self.pgControl.numberOfPages = imgs.count;
 }
 
 #pragma mark - 创建更多的按钮
@@ -126,7 +128,7 @@
     UIPageControl *pgCtrl = [[UIPageControl alloc]init];
     
 //    总页数
-    pgCtrl.numberOfPages = 4;
+//    pgCtrl.numberOfPages = 4;
 //    当前页数
     pgCtrl.currentPage = 0;
     
@@ -147,5 +149,6 @@
         make.centerX.equalTo(self);
         make.bottom.equalTo(self).offset(-80);
     }];
+    self.pgControl = pgCtrl;
 }
 @end
