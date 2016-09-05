@@ -59,6 +59,13 @@
     UIScrollView *sV = [[UIScrollView alloc]initWithFrame:self.bounds];
     
     [self addSubview:sV];
+//    关掉弹簧效果
+    self.scrollView.bounces = NO;
+//    开启分页
+    self.scrollView.pagingEnabled = YES;
+//    禁用滚动条
+    self.scrollView.showsVerticalScrollIndicator = NO;
+    self.scrollView.showsHorizontalScrollIndicator = NO;
     
 //    记录变量
     self.scrollView = sV;
