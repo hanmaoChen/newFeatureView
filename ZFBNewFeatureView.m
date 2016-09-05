@@ -19,16 +19,28 @@
     _imgs = imgs;
     
 //    将数据显示到面板上
+    
+    
+    
+//    准备一个初始的frame
+    CGRect rect = self.scrollView.bounds;
+//    取出宽度
+    CGFloat width = rect.size.width;
 //    有多少个数据就循环创建多少个UIImageView
     for (int i = 0; i<_imgs.count; i++) {
 //        创建UIImageView
-        UIImageView *iv = [[UIImageView alloc]initWithFrame:self.scrollView.bounds];
-//        添加图片
+        UIImageView *iv = [[UIImageView alloc]init];
+//        设置frame
+        iv.frame = CGRectOffset(rect, width*i, 0);
+        
+//        设置图片
         iv.image = _imgs[i];
+
 //        添加到scrollview
         [self.scrollView addSubview:iv];
         
     }
+    self.scrollView.contentSize = CGSizeMake(width*(imgs.count+1), 0);
     
 }
 
