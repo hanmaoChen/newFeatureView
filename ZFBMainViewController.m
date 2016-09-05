@@ -8,6 +8,7 @@
 
 #import "ZFBMainViewController.h"
 #import "Masonry.h"
+#import "ZFBNewFeatureView.h"
 @interface ZFBMainViewController ()
 
 @end
@@ -28,6 +29,10 @@
 
 #pragma mark - 显示新特性界面
 -(void)showNewFeatureView{
+//    创建新特性界面
+    ZFBNewFeatureView *vNew = [[ZFBNewFeatureView alloc]initWithFrame:self.view.bounds ];
+    vNew.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:vNew];
     
     
 }

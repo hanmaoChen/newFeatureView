@@ -1,13 +1,13 @@
 //
-//  ZFBNewFeature.m
+//  ZFBNewFeature.h
 //  newCharacteristic
 //
 //  Created by  chenhanmao on 9/5/16.
 //  Copyright © 2016  chenhanmao. All rights reserved.
 //
 
-#import "ZFBNewFeature.h"
+#import <UIKit/UIKit.h>
 
-@implementation ZFBNewFeature
+@interface ZFBNewFeatureView : UIView
 
 @end
