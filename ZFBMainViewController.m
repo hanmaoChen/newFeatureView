@@ -18,6 +18,18 @@
     [super viewDidLoad];
 //    初始化主界面
     [self setupUI];
+    
+//    显示新特性界面
+    [self showNewFeatureView];
+    
+}
+
+
+
+#pragma mark - 显示新特性界面
+-(void)showNewFeatureView{
+    
+    
 }
 
 

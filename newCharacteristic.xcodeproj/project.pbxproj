@@ -24,6 +24,7 @@
 		E6CEC6021D7D9A0E0086C3AF /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CEC5F51D7D9A0E0086C3AF /* View+MASAdditions.m */; };
 		E6CEC6031D7D9A0E0086C3AF /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CEC5F81D7D9A0E0086C3AF /* ViewController+MASAdditions.m */; };
 		E6CEC6071D7D9AA10086C3AF /* ZFBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CEC6061D7D9AA10086C3AF /* ZFBMainViewController.m */; };
+		E6CEC60B1D7DA2CE0086C3AF /* ZFBNewFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CEC60A1D7DA2CE0086C3AF /* ZFBNewFeature.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,8 @@
 		E6CEC5F81D7D9A0E0086C3AF /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		E6CEC6051D7D9AA10086C3AF /* ZFBMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZFBMainViewController.h; path = ../ZFBMainViewController.h; sourceTree = "<group>"; };
 		E6CEC6061D7D9AA10086C3AF /* ZFBMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZFBMainViewController.m; path = ../ZFBMainViewController.m; sourceTree = "<group>"; };
+		E6CEC6091D7DA2CE0086C3AF /* ZFBNewFeature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZFBNewFeature.h; path = ../ZFBNewFeature.h; sourceTree = "<group>"; };
+		E6CEC60A1D7DA2CE0086C3AF /* ZFBNewFeature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZFBNewFeature.m; path = ../ZFBNewFeature.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +98,9 @@
 		E6CEC5C51D7D923B0086C3AF /* newCharacteristic */ = {
 			isa = PBXGroup;
 			children = (
+				E6CEC60C1D7DA3EA0086C3AF /* other */,
 				E6CEC5DD1D7D99AD0086C3AF /* ThirdLib */,
 				E6CEC6041D7D9A330086C3AF /* NewFeature */,
-				E6CEC5C91D7D923B0086C3AF /* AppDelegate.h */,
-				E6CEC5CA1D7D923B0086C3AF /* AppDelegate.m */,
 				E6CEC6051D7D9AA10086C3AF /* ZFBMainViewController.h */,
 				E6CEC6061D7D9AA10086C3AF /* ZFBMainViewController.m */,
 				E6CEC5CF1D7D923B0086C3AF /* Main.storyboard */,
@@ -162,8 +164,19 @@
 		E6CEC6041D7D9A330086C3AF /* NewFeature */ = {
 			isa = PBXGroup;
 			children = (
+				E6CEC6091D7DA2CE0086C3AF /* ZFBNewFeature.h */,
+				E6CEC60A1D7DA2CE0086C3AF /* ZFBNewFeature.m */,
 			);
 			name = NewFeature;
+			sourceTree = "<group>";
+		};
+		E6CEC60C1D7DA3EA0086C3AF /* other */ = {
+			isa = PBXGroup;
+			children = (
+				E6CEC5C91D7D923B0086C3AF /* AppDelegate.h */,
+				E6CEC5CA1D7D923B0086C3AF /* AppDelegate.m */,
+			);
+			name = other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +258,7 @@
 				E6CEC5FD1D7D9A0E0086C3AF /* MASLayoutConstraint.m in Sources */,
 				E6CEC5C81D7D923B0086C3AF /* main.m in Sources */,
 				E6CEC6031D7D9A0E0086C3AF /* ViewController+MASAdditions.m in Sources */,
+				E6CEC60B1D7DA2CE0086C3AF /* ZFBNewFeature.m in Sources */,
 				E6CEC6021D7D9A0E0086C3AF /* View+MASAdditions.m in Sources */,
 				E6CEC6071D7D9AA10086C3AF /* ZFBMainViewController.m in Sources */,
 				E6CEC5FE1D7D9A0E0086C3AF /* MASViewAttribute.m in Sources */,
