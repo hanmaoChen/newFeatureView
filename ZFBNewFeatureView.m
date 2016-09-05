@@ -8,7 +8,7 @@
 
 #import "ZFBNewFeatureView.h"
 #import "Masonry.h"
-@interface ZFBNewFeatureView()
+@interface ZFBNewFeatureView()<UIScrollViewDelegate>
 
 @property(weak,nonatomic)UIScrollView *scrollView;
 @property(weak,nonatomic)UIPageControl *pgControl;
@@ -105,6 +105,35 @@
     return self;
 }
 
+#pragma mark - scrollView 的代理方法
+/**
+ *  滚动时调用的方法
+ */
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+//    超过一半后切换
+    int page = (scrollView.contentOffset.x/self.bounds.size.width)+0.5;
+    self.pgControl.currentPage = page;
+    
+//    到最后，隐藏页码显示器
+    self.pgControl.hidden = page == self.pgControl.numberOfPages;
+    
+}
+/**
+ * 拖动完成后
+ */
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    
+//    获取当前的页码
+    int page = (scrollView.contentOffset.x/self.bounds.size.width);
+    
+//    到主界面后移除新特性界面
+    if (page == self.imgs.count) {
+        [self removeFromSuperview];
+    }
+    
+}
+
+
 #pragma mark - 初始化控件
 -(void)setupUI{
 //    创建UIScrollView
@@ -118,6 +147,7 @@
 //    禁用滚动条
     sV.showsVerticalScrollIndicator = NO;
     sV.showsHorizontalScrollIndicator = NO;
+    sV.delegate = self;
     
 //    记录变量
     self.scrollView = sV;
