@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ZFBMainViewController.h
 //  newCharacteristic
 //
 //  Created by  chenhanmao on 9/5/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ZFBMainViewController : UIViewController
 
 @end
-
