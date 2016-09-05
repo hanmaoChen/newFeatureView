@@ -7,6 +7,11 @@
 //
 
 #import "ZFBNewFeatureView.h"
+@interface ZFBNewFeatureView()
+
+@property(weak,nonatomic)UIScrollView *scrollView;
+
+@end
 
 @implementation ZFBNewFeatureView
 -(void)setImgs:(NSArray *)imgs{
@@ -14,6 +19,16 @@
     _imgs = imgs;
     
 //    将数据显示到面板上
+//    有多少个数据就循环创建多少个UIImageView
+    for (int i = 0; i<_imgs.count; i++) {
+//        创建UIImageView
+        UIImageView *iv = [[UIImageView alloc]initWithFrame:self.scrollView.bounds];
+//        添加图片
+        iv.image = _imgs[i];
+//        添加到scrollview
+        [self.scrollView addSubview:iv];
+        
+    }
     
 }
 
@@ -32,6 +47,9 @@
     UIScrollView *sV = [[UIScrollView alloc]initWithFrame:self.bounds];
     
     [self addSubview:sV];
+    
+//    记录变量
+    self.scrollView = sV;
     
 }
 @end
