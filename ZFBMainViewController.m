@@ -34,7 +34,20 @@
     vNew.backgroundColor = [UIColor blueColor];
     [self.view addSubview:vNew];
     
+}
+
+#pragma mark - 提供图片数组的方法
+-(NSArray *)getNewFeatureImg{
     
+    int count = 4;
+//    根据图片的数量循环创建图片的对象
+    NSMutableArray *imgMArr = [NSMutableArray array];
+    for (int i = 0; i<count; i++) {
+        UIImage *img = [UIImage imageNamed:[@"common_h" stringByAppendingFormat:@"%d",i+1]];
+        [imgMArr addObject:img];
+                        
+    }
+    return imgMArr;
 }
 
 
